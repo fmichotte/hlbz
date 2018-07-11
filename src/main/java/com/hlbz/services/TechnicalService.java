@@ -1,16 +1,14 @@
-package com.hlbz.daos;
+package com.hlbz.services;
 
 import java.util.List;
 
 import com.hlbz.entities.Technical;
 
-public interface TechnicalDAO {
+public interface TechnicalService {
 
-	
 	public List<Technical> getTechnicals();
 	public Technical saveTechnical(Technical tech);
-	public void deleteTechnical(Technical tech);
 	public Technical getTechnical(int id);
-	
+	public void removeTechnical(Technical tech);
 	
 }

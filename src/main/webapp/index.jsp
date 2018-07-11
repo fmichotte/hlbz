@@ -1,5 +1,13 @@
 <html>
+<head>
+
+<title>Welcome on HLBZ PROJECT</title>
+
+</head>
 <body>
-<h2>Hello World From HSBZ</h2>
+<h2>HSBZ</h2>
+<hr>
+
+<a href="technical/list">Technical LIST</a>
 </body>
 </html>

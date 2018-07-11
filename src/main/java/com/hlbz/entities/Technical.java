@@ -18,10 +18,10 @@ public class Technical {
 	private int id;
 	
 	
-	@Column(name="key")
+	@Column(name="key_param")
 	private String key;
 	
-	@Column(name="value")
+	@Column(name="key_value")
 	private String value;
 
 	public int getId() {

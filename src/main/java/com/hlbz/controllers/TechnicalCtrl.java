@@ -5,11 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.hlbz.daos.TechnicalDAO;
 import com.hlbz.entities.Technical;
+import com.hlbz.services.TechnicalService;
 
 @Controller
 @RequestMapping("/technical")
@@ -17,13 +16,13 @@ public class TechnicalCtrl {
 	
 	
 	@Autowired
-	private TechnicalDAO technicalDAO;
+	private TechnicalService technicalService;
 	
 	
 	@RequestMapping("/list")
 	public String listCustomers(Model theModel) {
 		
-		List<Technical> list = technicalDAO.getTechnicals();
+		List<Technical> list = technicalService.getTechnicals();
 
 		theModel.addAttribute("LST", list);
 		
