@@ -17,7 +17,6 @@ import com.hlbz.services.TechnicalService;
 @RequestMapping("/rest")
 public class TechnicalRestCtrl {
 	
-	
 	@Autowired
 	private TechnicalService techService;
 	

@@ -2,6 +2,7 @@ package com.hlbz.daos;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -10,9 +11,11 @@ import org.springframework.stereotype.Repository;
 
 import com.hlbz.entities.Technical;
 
+
 @Repository
 public class TechnicalDAOImpl implements TechnicalDAO {
 	
+	static Logger log = Logger.getLogger(TechnicalDAOImpl.class);
 	
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -51,7 +54,9 @@ public class TechnicalDAOImpl implements TechnicalDAO {
 
 		Session currentSession = sessionFactory.getCurrentSession();
 		Technical tech = currentSession.get(Technical.class, id);
-		
+
+		log.trace(tech);
+		log.error(tech);
 		return tech;
 	}
 
