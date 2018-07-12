@@ -44,4 +44,14 @@ public class TechnicalServiceImpl implements TechnicalService {
 		
 	}
 
+
+	@Override
+	public void activeTechnical(int id, boolean enabled) {
+		
+		Technical tech = technicalDAO.getTechnical(id);
+		tech.setEnabled(enabled);
+		technicalDAO.saveTechnical(tech);
+		
+	}
+
 }

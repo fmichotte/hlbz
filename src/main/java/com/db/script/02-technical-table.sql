@@ -11,6 +11,8 @@ CREATE TABLE `technical` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `key_param` varchar(45) DEFAULT NULL,
   `key_value` varchar(60) DEFAULT NULL,
+  `enabled` tinyint(1) NOT NULL,
+
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 

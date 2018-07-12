@@ -24,6 +24,10 @@ public class Technical {
 	@Column(name="key_value")
 	private String value;
 
+	@Column(name="enabled")
+	private boolean enabled;
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -47,14 +51,20 @@ public class Technical {
 	public void setValue(String value) {
 		this.value = value;
 	}
+	
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
+	}
 
 	@Override
 	public String toString() {
-		return "Technical [id=" + id + ", key=" + key + ", value=" + value + "]";
+		return "Technical [id=" + id + ", key=" + key + ", value=" + value + ", enabled=" + enabled + "]";
 	}
-	
-	
-	
-	
+
 
 }

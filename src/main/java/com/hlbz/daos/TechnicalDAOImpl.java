@@ -55,8 +55,6 @@ public class TechnicalDAOImpl implements TechnicalDAO {
 		Session currentSession = sessionFactory.getCurrentSession();
 		Technical tech = currentSession.get(Technical.class, id);
 
-		log.trace(tech);
-		log.error(tech);
 		return tech;
 	}
 

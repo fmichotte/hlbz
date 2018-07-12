@@ -10,5 +10,6 @@ public interface TechnicalService {
 	public Technical saveTechnical(Technical tech);
 	public Technical getTechnical(int id);
 	public void removeTechnical(Technical tech);
+	public void activeTechnical(int id, boolean enabled);
 	
 }
